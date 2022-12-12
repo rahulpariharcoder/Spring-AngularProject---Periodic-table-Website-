@@ -15,6 +15,6 @@ with proper authentication and Guard
 ![image](https://user-images.githubusercontent.com/55474401/206990373-c483e6e4-f6e3-49b5-86a7-10b330cca1a6.png)
 
 3) Registeration Page
-![image](https://user-images.githubusercontent.com/55474401/206990481-e2be0b49-8300-49c3-95ec-c2dac80b0bdc.png)
+![image](https://user-images.githubusercontent.com/55474401/206990722-516c0e75-2cc7-437c-a419-15795fbabd96.png)
 ![image](https://user-images.githubusercontent.com/55474401/206990535-f633a747-4b6e-47e0-9fe2-632bdde67b5a.png)
 
