@@ -1,0 +1,22 @@
+body {
+  padding: 2%;
+  max-width: 1080px;
+  margin: 4% auto !important;
+  float: none !important;
+}
+legend {
+  font-size: 30px;
+  font-weight: bold;
+}
+label {
+  font-weight: bold;
+}
+.input1 {
+  margin-bottom: 2%;
+}
+button {
+  margin-right: 2%;
+}
+.form-control:focus {
+  border: 3px solid #2f7425;
+}

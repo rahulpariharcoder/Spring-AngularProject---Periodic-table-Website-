@@ -1,0 +1,86 @@
+.container1 {
+  width: 100%;
+}
+
+.heading {
+  background-color: royalblue;
+  margin-bottom: 2%;
+  color: white;
+  padding: 1% 5%;
+  font-size: 20px;
+}
+a.heading {
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  padding-right: 1em;
+}
+.part-1 {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: justify;
+}
+.content-1 {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+.content-2 {
+  font-size: 30px;
+  padding-left: 20px;
+}
+.part-2 {
+  background-color: rgb(174, 216, 255);
+  padding-top: 12px;
+  padding-left: 0;
+}
+
+.section-1 {
+  margin-bottom: 1%;
+}
+.form-control:focus {
+  border: 3px solid #2f7425;
+}
+
+.header {
+  background-color: rgb(5, 66, 164);
+  color: white;
+  padding: 20px;
+}
+.col-sm-5 {
+  margin-bottom: 2%;
+  margin-left: 4%;
+}
+
+table {
+  background-color: rgb(5, 66, 164);
+  color: white;
+  border-collapse: collapse;
+  overflow: auto;
+}
+th {
+  text-align: start;
+  padding: 1%;
+  width: 12.5%;
+}
+/* tbody tr:nth-child(odd) {
+  background-color: #2f7425;
+}
+tbody tr:nth-child(even) {
+  background-color: yellow;
+} */
+td {
+  width: 12.5%;
+  text-align: start;
+  padding: 1%;
+  border: 1px solid rgb(255, 254, 254);
+  border-left: none;
+  border-right: none;
+}
+button {
+  margin: 2%;
+}
+
+.justify-content-between {
+  padding-left: 4%;
+  padding-right: 1.5%;
+}

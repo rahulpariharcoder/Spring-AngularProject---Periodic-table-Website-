@@ -1,0 +1,12 @@
+com\example\demo\DemoApplication.class
+com\example\demo\Persistence\SignUpPageRepository.class
+com\example\demo\Domain\Model.class
+com\example\demo\Persistence\LoginPageRepository.class
+com\example\demo\Domain\ErrorField.class
+com\example\demo\Persistence\ElementRepository.class
+com\example\demo\Domain\LoginPage.class
+com\example\demo\Persistence\ModelRepository.class
+com\example\demo\Service\ElementService.class
+com\example\demo\Domain\Element.class
+com\example\demo\Domain\SignUpPage.class
+com\example\demo\Controller\ControllerElement.class

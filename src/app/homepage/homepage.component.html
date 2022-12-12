@@ -1,0 +1,201 @@
+<body>
+  <div class="container1">
+    <div class="row">
+      <p class="heading col periodic">Periodic Table of Elements</p>
+      <a class="heading col text-uppercase" (click)="logout()">Logout</a>
+    </div>
+    <div class="row section-1">
+      <div class="part-1 col-sm"><p class="content-2">New Element</p></div>
+      <div class="part-2 col-sm">
+        <p class="content-1">Elements available: {{ $elementNumber }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-element col-sm">
+        <form [formGroup]="addData">
+          <div class="row">
+            <div class="form-group col-sm-5">
+              <input
+                class="form-control"
+                autofocus
+                title="atomicNumber"
+                type="number"
+                formControlName="atomicNumber"
+                placeholder="Atomic Number"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && addData.controls['atomicNumber'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted &&
+                  addData.controls['atomicNumber'].errors &&
+                  addData.controls['atomicNumber'].value !== null
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="addData.controls['atomicNumber'].errors?.['required']&& addData.controls['atomicNumber'].value!== null"
+                >
+                  This field is required!
+                </div>
+                <div
+                  *ngIf="addData.controls['atomicNumber'].errors?.['pattern']&& addData.controls['atomicNumber'].value!== null"
+                >
+                  'Enter valid Atomic number between 1 to 120 !'
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-sm-5">
+              <input
+                title="chemicalSymbol"
+                type="text"
+                formControlName="chemicalSymbol"
+                placeholder="Chemical Symbol"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && addData.controls['chemicalSymbol'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted &&
+                  addData.controls['chemicalSymbol'].errors &&
+                  addData.controls['chemicalSymbol'].value !== null
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="addData.controls['chemicalSymbol'].errors?.['required'] && addData.controls['chemicalSymbol'].value!== null"
+                >
+                  This field is required!
+                </div>
+                <div
+                  *ngIf="addData.controls['chemicalSymbol'].errors?.['pattern'] && addData.controls['chemicalSymbol'].value !== null"
+                >
+                  'Enter valid Chemical symbol of 2 characters long where the
+                  first character is always in uppercase and the second in
+                  lowercase!'
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-sm-5">
+              <input
+                title="chemicalName"
+                type="text"
+                formControlName="chemicalName"
+                placeholder="Chemical Name"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && addData.controls['chemicalName'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted &&
+                  addData.controls['chemicalName'].errors &&
+                  addData.controls['chemicalName'].value !== null
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="addData.controls['chemicalName'].errors?.['required'] && addData.controls['chemicalName'].value!== null"
+                >
+                  This field is required!
+                </div>
+                <div
+                  *ngIf="addData.controls['chemicalName'].errors?.['pattern'] && addData.controls['chemicalName'].value !== null"
+                >
+                  Enter chemical name with first letter uppercase
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-sm-5">
+              <input
+                title="atomicWeight"
+                type="number"
+                formControlName="atomicWeight"
+                placeholder="Atomic Weight"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && addData.controls['atomicWeight'].errors
+                }"
+              />
+              <div
+                *ngIf="
+                  submitted &&
+                  addData.controls['atomicWeight'].errors &&
+                  addData.controls['atomicWeight'].value !== null
+                "
+                class="invalid-feedback"
+              >
+                <div
+                  *ngIf="addData.controls['atomicWeight'].errors?.['required'] && addData.controls['atomicWeight'].value!== null"
+                >
+                  This field is required!
+                </div>
+                <div
+                  *ngIf="addData.controls['atomicWeight'].errors?.['pattern'] && addData.controls['atomicWeight'].value !== null"
+                >
+                  "Enter Atomic weight with up to 3 digits before the decimal
+                  and 4 digits after the decimal point"
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row justify-content-between">
+              <div class="col-2">
+                <button
+                  title="reset"
+                  type="reset"
+                  class="reset btn btn-outline-primary"
+                >
+                  Reset
+                </button>
+              </div>
+              <div class="col-2">
+                <button
+                  title="add"
+                  type="button"
+                  class="add btn btn-outline-primary"
+                  (click)="add()"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="table col-sm">
+        <table>
+          <thead>
+            <tr>
+              <th>Atomic Number</th>
+              <th>Chemical Symbol</th>
+              <th>Chemical Name</th>
+              <th>Atomic Weight</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let ele of sorted(element)">
+            <tr>
+              <td>{{ ele["atomicNumber"] }}</td>
+              <td>{{ ele["symbol"] }}</td>
+              <td>{{ ele["name"] }}</td>
+              <td>{{ ele["weight"] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
